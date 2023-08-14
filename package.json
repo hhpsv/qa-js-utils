@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "esbuild": "0.19.2"
+  },
+  "name": "qa-js-utils",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "scripts": {
+    "build": "node build.mjs",
+    "postbuild": "sed -i 's/(function()/javascript:!(function()/g' ./dist/*.js"
+  }
+}

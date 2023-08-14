@@ -7,6 +7,6 @@
   "devDependencies": {},
   "scripts": {
     "build": "node build.mjs",
-    "postbuild": "sed -i 's/(function()/javascript:!(function()/g' ./dist/*.js"
+    "postbuild": "sed -i 's/(function()/javascript:!&/; s/$/void 0;/' ./dist/*.js"
   }
 }
